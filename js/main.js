@@ -6,41 +6,44 @@ function getComputerChoice() {
     let choices = ["rock", "paper", "scissors"];
     
     let randomNum = Math.floor(Math.random() * 3);
+    document.getElementById("computerChoice").innerText = `Computer choice: ${choices[randomNum]}`;
     return choices[randomNum];    
 }
 function playRound(humanChoice, computerChoice) {
+    const results = document.getElementById("results")
     if (humanChoice === computerChoice) {
-        alert(`Computer chose ${computerChoice}. It's a tie!`);
+        results.innerText = `Computer chose ${computerChoice}. It's a tie!`;
     } else if (computerChoice === "rock") {
         if (humanChoice === "scissors") {
             computerScore++;
-            alert(`Computer chose ${computerChoice}. You lose.`)
+            results.innerText = `Computer chose ${computerChoice}. You lose.`;
         } else if (humanChoice === "paper") {
             humanScore++;
-            alert(`Computer chose ${computerChoice}. You win.`)
+            results.innerText = `Computer chose ${computerChoice}. You win.`;
         }
     } else if (computerChoice === "paper") {
         if (humanChoice === "rock") {
             computerScore++;
-            alert(`Computer chose ${computerChoice}. You lose.`)
+            results.innerText = `Computer chose ${computerChoice}. You lose.`;
         } else if (humanChoice === "paper") {
             humanScore++;
-            alert(`Computer chose ${computerChoice}. You win.`)
+            results.innerText = `Computer chose ${computerChoice}. You win.`;
         }
     } else if (computerChoice === "scissors") {
         if (humanChoice === "paper") {
             computerScore++;
-            alert(`Computer chose ${computerChoice}. You lose.`)
+            results.innerText = `Computer chose ${computerChoice}. You lose.`;
         } else if (humanChoice === "rock") {
             humanScore++;
-            alert(`Computer chose ${computerChoice}. You win.`)
+            results.innerText = `Computer chose ${computerChoice}. You win.`;
         }
     }
-    
+
 }
 choices.forEach((button) => {
     button.addEventListener("click", () => {
         let humanChoice = button.innerText.toLowerCase();
+        document.getElementById("humanChoice").innerText = `Human Choice: ${humanChoice}`
         let computerChoice = getComputerChoice();
         playRound(humanChoice, computerChoice);
 
