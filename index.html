@@ -4,18 +4,24 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" href="css/styles.css">
         <script src="js/main.js" defer></script>
     </head>
     <body>
-        <h1>ROCK PAPER SCISSORS</h1>
-
-        <div id="computerChoice">Computer choice:</div>
-        <div id="humanChoice">Human choice:</div>
-        <div>
-            <button>Rock</button>
-            <button>Paper</button>
-            <button>Scissors</button>
-        </div>   
-        <span id="results"></span>     
+        <div id="container">
+            <h1>ROCK PAPER SCISSORS</h1>
+            <div id="choices">
+                <div id="computerChoice" class="normal-text">Computer choice:</div>
+                <div id="humanChoice" class="normal-text">Human choice:</div>
+            </div>
+            
+            <div id="btns">
+                <button>Rock</button>
+                <button>Paper</button>
+                <button>Scissors</button>
+            </div>   
+            <span id="results" class="normal-text"></span>
+        </div>
+             
     </body>
 </html>

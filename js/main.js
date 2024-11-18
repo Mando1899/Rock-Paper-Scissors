@@ -38,8 +38,9 @@ function playRound(humanChoice, computerChoice) {
             results.innerText = `Computer chose ${computerChoice}. You win.`;
         }
     }
-
 }
+
+
 choices.forEach((button) => {
     button.addEventListener("click", () => {
         let humanChoice = button.innerText.toLowerCase();

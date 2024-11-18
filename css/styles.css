@@ -1,0 +1,25 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.normal-text {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#container {
+    display: block;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+#choices {
+    margin-bottom: 20px;
+}
+
+#btns {
+    margin-bottom: 20px;
+}
