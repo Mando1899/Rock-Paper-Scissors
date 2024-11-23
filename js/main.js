@@ -1,6 +1,9 @@
 const choices = document.querySelectorAll("button");
 let humanScore = 0;
 let computerScore = 0;
+const humanScoreTag = document.getElementById("humanScore");
+const computerScoreTag = document.getElementById("computerScore");
+const results = document.getElementById("result");
 
 function getComputerChoice() {
     let choices = ["rock", "paper", "scissors"];
@@ -10,7 +13,6 @@ function getComputerChoice() {
     return choices[randomNum];    
 }
 function playRound(humanChoice, computerChoice) {
-    const results = document.getElementById("results")
     if (humanChoice === computerChoice) {
         results.innerText = `Computer chose ${computerChoice}. It's a tie!`;
     } else if (computerChoice === "rock") {
@@ -38,6 +40,8 @@ function playRound(humanChoice, computerChoice) {
             results.innerText = `Computer chose ${computerChoice}. You win.`;
         }
     }
+    humanScoreTag.innerText = `Human score: ${humanScore}`;
+    computerScoreTag.innerText = `Computer score: ${computerScore}`
 }
 
 

@@ -23,3 +23,9 @@
 #btns {
     margin-bottom: 20px;
 }
+
+#score {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
