@@ -25,7 +25,7 @@ function playRound(humanChoice, computerChoice) {
         if (humanChoice === "rock") {
             computerScore++;
             results.innerText = `Computer chose ${computerChoice}. You lose.`;
-        } else if (humanChoice === "paper") {
+        } else if (humanChoice === "scissors") {
             humanScore++;
             results.innerText = `Computer chose ${computerChoice}. You win.`;
         }
