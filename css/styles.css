@@ -29,3 +29,7 @@
     flex-direction: column;
     margin-top: 20px;
 }
+
+#end-game {
+    display: none;
+}
